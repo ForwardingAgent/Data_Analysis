@@ -26,3 +26,18 @@ class Child(Parent):
 
 c1 = Child()
 c1.set_info('name', 'BB-8')
+
+
+
+w = int(input())
+
+
+def countSetBits(n):
+    count = 0
+    while n:
+        count += n & 1
+        n >>= 1
+    return count
+ 
+
+print(countSetBits(w))
