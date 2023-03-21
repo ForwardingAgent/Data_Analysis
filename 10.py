@@ -1,43 +1,15 @@
-import abc
 
 
-class Parent(abc.ABC):
-    @abc.abstractmethod
-    def get_info(self, parameter):
-        """Get parameter info"""
-
-    @abc.abstractmethod
-    def set_info(self, parameter, value):
-        """Set parameter to value"""
+def foo(lenght: int = 10):
+    lst = [x for x in range(lenght)]
+    lst1 = list(filter(lambda x: x % 2 == 0, lst))
+    return lst1
 
 
-class Child(Parent):
-
-    def __init__(self):
-        self._parameters = {}
-
-    def get_info(self, parameter):
-        return self._parameters.get(parameter)
-
-    def set_info(self, parameter, value):
-        self._parameters[parameter] = value
-        return print(self._parameters)
+def test():
+    assert foo(8) == [0, 2, 4, 6]
+    assert foo(4) == [0, 2]
+    assert foo(-4) == [-2]
 
 
-c1 = Child()
-c1.set_info('name', 'BB-8')
-
-
-
-w = int(input())
-
-
-def countSetBits(n):
-    count = 0
-    while n:
-        count += n & 1
-        n >>= 1
-    return count
- 
-
-print(countSetBits(w))
+test()
