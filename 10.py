@@ -1,11 +1,12 @@
 
-'''
+
 def invert(foo):
     def wraper(*args, **kwargs):
+        pass
+    pass
 
 
-
-def foo(lenght: int = 10):
+def foo(lenght: int = 8):
     lst = [x for x in range(lenght)]
     lst1 = list(filter(lambda x: x % 2 == 0, lst))
     return lst1
@@ -17,7 +18,7 @@ def test():
     assert foo(-4) == [-2]
 
 
-test()'''
+test()
 
 def jurnal(student, math, **marks):
     print(f'Student Name: {student}')
