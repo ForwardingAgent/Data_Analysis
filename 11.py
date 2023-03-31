@@ -1,15 +1,9 @@
+def flatten_and_sort(array):
+    lst = []
+    [lst.extend(x) for x in array]
+    return sorted(lst)
 
-n = int(input())
-best = 0
-counter = 0
-for i in range(n):
-	m = int(input())
-	if m > 0:
-		counter += 1
-		best = max(best, counter)
-	else:
-		counter = 0
-print(best)
+print(flatten_and_sort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]))
         
 
 
