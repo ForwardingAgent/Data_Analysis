@@ -1,10 +1,18 @@
-def flatten_and_sort(array):
-    lst = []
-    [lst.extend(x) for x in array]
-    return sorted(lst)
+def sequence_sum(begin_number, end_number, step):
+    return sum(range(begin_number, end_number+1, step))
 
-print(flatten_and_sort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]))
-        
+
+
+
+print(sequence_sum(2, 6, 2))  # 12)
+print(sequence_sum(1, 5, 1))  # 15)
+print(sequence_sum(1, 5, 3))  # 5)
+print(sequence_sum(0, 15, 3))  # 45)
+
+#2,2,2 --> 2
+#2,6,2 --> 12 (2 + 4 + 6)
+#1,5,1 --> 15 (1 + 2 + 3 + 4 + 5)
+#1,5,3  --> 5 (1 + 4)
 
 
 #import sys
