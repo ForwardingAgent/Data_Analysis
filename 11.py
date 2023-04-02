@@ -1,18 +1,12 @@
-def sequence_sum(begin_number, end_number, step):
-    return sum(range(begin_number, end_number+1, step))
+class Tutorial:
+    title = 'Атрибут класса'
 
+    def __init__(self, name) -> None:
+        self.name = name 
 
-
-
-print(sequence_sum(2, 6, 2))  # 12)
-print(sequence_sum(1, 5, 1))  # 15)
-print(sequence_sum(1, 5, 3))  # 5)
-print(sequence_sum(0, 15, 3))  # 45)
-
-#2,2,2 --> 2
-#2,6,2 --> 12 (2 + 4 + 6)
-#1,5,1 --> 15 (1 + 2 + 3 + 4 + 5)
-#1,5,3  --> 5 (1 + 4)
+t = Tutorial('lesson')
+print(t.__dict__)
+print(Tutorial.__dict__)
 
 
 #import sys
