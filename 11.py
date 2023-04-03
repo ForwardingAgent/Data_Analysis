@@ -1,13 +1,32 @@
-class Tutorial:
-    title = 'Атрибут класса'
+class Graph:
+    LIMIT_Y = [0, 10]
 
-    def __init__(self, name) -> None:
-        self.name = name 
+    def set_data(self, data):
+        self.data = data
+        self.lst = filter(lambda x: (self.LIMIT_Y[0] <= x <= self.LIMIT_Y[1]), self.data)
 
-t = Tutorial('lesson')
-print(t.__dict__)
-print(Tutorial.__dict__)
+    def draw(self):
+        print(*self.lst)
 
+
+graph_1 = Graph()
+graph_1.set_data([10, -5, 100, 20, 0, 80, 45, 2, 5, 7])
+graph_1.draw()
+
+
+class Notes:
+    pass
+# 
+# 
+# mydict = {
+#     'uid': 1005435,
+#     'title': "Шутка",
+#     'author': "И.С. Бах",
+#     'pages': 2
+# }
+# for at, val in mydict.items():
+#     setattr(Notes, at, val)
+# print(getattr(Notes, 'author'))
 
 #import sys
 # 
