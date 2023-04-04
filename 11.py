@@ -1,17 +1,48 @@
-class Graph:
-    LIMIT_Y = [0, 10]
+import random
 
-    def set_data(self, data):
-        self.data = data
-        self.lst = filter(lambda x: (self.LIMIT_Y[0] <= x <= self.LIMIT_Y[1]), self.data)
+class Line:
 
-    def draw(self):
-        print(*self.lst)
+    def __init__(self, a, b, c, d):
+        self.a = a, 
+        self.b = b,
+        self.c = c, 
+        self.d = d
+        sp = (self.a, self.b)
+        ep = (self.c, self.d)
+        
+    
+class Rect:
+    def __init__(self, a, b, c, d):
+        self.a = a, 
+        self.b = b,
+        self.c = c, 
+        self.d = d
+        sp = (self.a, self.b)
+        ep = (self.c, self.d)
+
+class Ellipse:
+    def __init__(self, a, b, c, d):
+        self.a = a, 
+        self.b = b,
+        self.c = c, 
+        self.d = d
+        sp = (self.a, self.b)
+        ep = (self.c, self.d)
 
 
-graph_1 = Graph()
-graph_1.set_data([10, -5, 100, 20, 0, 80, 45, 2, 5, 7])
-graph_1.draw()
+a = 1
+b = 2
+c = 3
+d = 4
+g1 = Line(a, b, c, d)
+g2 = Rect(a, b, c, d)
+g3 = Ellipse(a, b, c, d)
+
+
+# далее ее сплитим по Enter line.split('\n'), 
+# получаем список типа ['tree - дерево', ..., ...], 
+# для каждого item которого eng_word, rus_word = (item.split(' - ')), 
+# затем вызываем метод tr.add(eng_word, rus_word)
 
 
 class Notes:
